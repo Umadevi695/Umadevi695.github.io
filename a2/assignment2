@@ -1,0 +1,11 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Picture</title>
+    </head>
+    <body>
+        <h1>Image</h1>
+        <img src="https://picsum.photos/id/20/200/300" alt="image">
+
+    </body>
+</html>
