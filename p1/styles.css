@@ -29,8 +29,12 @@ header a{
     padding:20px;
 }
 .box{
-    width:600;
-    padding:20px;
+    width:400px;
+    padding:30px;
+    background-color:white;
+    border-radius:20px;
+    margin:10px;
+    
 }
 .btn-signup{
     background-color:orange;
@@ -49,5 +53,10 @@ header a{
 }
 .title{
     font-size:30px;
+
+}
+.section-title{
+    text-align:center;
+    font-size:40px;
 
 }
