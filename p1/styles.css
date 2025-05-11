@@ -8,11 +8,20 @@ header{
     background-color:orange;
     color:white;
     padding:10px;
+    position:sticky;
+    top:0;
 }
 
 .container{
     width:100%;
     margin:auto;
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    overflow:auto;
+    height:100%;
 }
 header li{
     display:inline-block;
@@ -25,8 +34,11 @@ header a{
 .row{
     display:flex;
     justify-content:space-around;
+    align-items:center;
     flex-wrap:wrap;
     padding:20px;
+    min-height:700px;
+    
 }
 .box{
     width:400px;
@@ -60,6 +72,7 @@ header a{
 .section-title{
     text-align:center;
     font-size:40px;
+    margin:50px;
 
 }
 footer {
@@ -108,4 +121,7 @@ footer {
 }
 .contact-info {
     margin-top: 1rem;
+}
+section{
+    min-height:700px;
 }
