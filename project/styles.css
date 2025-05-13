@@ -1,0 +1,123 @@
+
+body {
+      background-image: url('../images/background-pattern.jpg'); 
+      background-size: cover; 
+      background-repeat: no-repeat; 
+      background-position: center; 
+      height:100vh;
+      margin:0;
+}
+.header {
+            background-color: #f8f9fa; 
+            padding: 15px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 30px; 
+            margin-right: 15px;
+        }
+
+        .category-dropdown select {
+            padding: 8px 15px;
+            border: 1px solid #ced4da;
+            border-radius: 35px;
+            font-size: 14px;
+        }
+
+        .header-middle {
+            flex-grow: 1;
+            margin: 0 20px;
+            display: flex;
+        }
+
+        .search-bar {
+            position: relative;
+            width: 85%;
+            border-radius:50px;
+        }
+
+        .search-bar input[type="text"] {
+            padding: 10px 40px 10px 15px;
+            border: 1px solid #ced4da;
+            border-radius: 35px;
+            width: 100%;
+            font-size: 14px;
+        }
+
+        .search-bar button {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        .search-bar button img {
+            height: 20px;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+        }
+
+        .support-info {
+            margin-right: 20px;
+            font-size: 14px;
+        }
+
+        .user-icons {
+            margin-right: 15px;
+        }
+
+        .user-icons a {
+            margin-left: 10px;
+            color: #343a40; 
+            text-decoration: none;
+        }
+
+        .cart {
+            font-weight: bold;
+            font-size: 14px;
+        }
+.secondary-header {
+  background-color: #ffffff; 
+  padding: 10px 20px;
+  border-bottom: 1px solid #e0e0e0; 
+ }
+
+ .secondary-header ul {
+  list-style: none; 
+  padding: 0;
+  margin: 0;
+  display: flex; 
+  align-items: center; 
+ }
+
+ .secondary-header li {
+  margin-right: 15px; 
+ }
+
+ .secondary-header a {
+  text-decoration: none; 
+  color: #333; 
+  font-size: 14px;
+ }
+
+ .secondary-header a:hover {
+  color: #007bff; 
+ }
+
+
+
+  
