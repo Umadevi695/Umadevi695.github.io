@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+     .row{
+        display:flex;
+        justify-content: center;
+     }
+     .row div{
+        background-color: orange;
+        margin:10px;
+        padding:10px;
+        width:200px;
+     }
+    </style>
+    
+  </head>
+  <body>
+    <h1>Handling Arrays of Objects</h1>
+    <div id="container" class="row"></div>
+    <script>
+         const products = [
+        
+        { id: 1, name: "Apple", price: 250, imgUrl:"https://picsum.photos/id/10/200/200"},
+        { id: 2, name: "Orange", price: 100,imgUrl:"https://picsum.photos/id/11/200/200"},
+        { id: 3, name: "Mango", price: 80, imgUrl:"https://picsum.photos/id/12/200/200"}
+      ];
+        let str="";
+        products.map((value)=>{
+            str+=`<div>
+                <img src=${value.imgUrl}/>
+                <h2>${value.name}</h2>
+                <h3>${value.price}</h3>
+                 <button>Add to Cart</button>
+                </div>`
+        });
+        container.innerHTML=str;
+    </script>
+
+  </body>
+  </html>
