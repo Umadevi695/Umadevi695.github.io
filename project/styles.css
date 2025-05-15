@@ -281,8 +281,17 @@ body {
   font-size: 1.1rem;
   color: #333;
 }
-
-
+.footer {
+    padding: 10px;
+    text-align: center;
+    background-color: darkgray;
+    color:white;
+    font-size:medium;
+}
+.icons{
+  width:20px;
+  height:20px;
+}
 
 
 
