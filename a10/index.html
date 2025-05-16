@@ -12,74 +12,81 @@
       }
 
       .row div {
-      @@ -18,25 +19,65 @@
+      background-color: burlywood;
+      margin: 10px;
+      padding: 10px;
+      width: 200px;
+      text-align: center;
+      border-radius: 10px;
+      
       }
+       .row img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    button {
+      margin: 5px;
+      padding: 5px 10px;
+    }
     </style>
   </head>
   
   <body onload="dispProducts()">
     <h1>Handling Array of Objects</h1>
     <p>
-      <input type="number" id="txtId" />
-      <input type="text" id="txtName" />
-      <input type="number" id="txtPrice" />
-      <input type="text" id="txtUrl" />
+      <input type="number" id="textid" />
+      <input type="text" id="textname" />
+      <input type="number" id="textprice" />
+      <input type="text" id="texturl" />
       <button onclick="addProduct()">Add</button>
     </p>
     <div id="container" class="row"></div>
     <script>
-      const products = [
-        
-        {
-          id: 1,
-          name: "Apple",
-          price: 250,
-          imgUrl: "https://picsum.photos/id/11/200/200",
-        },
-        {
-          id: 2,
-          name: "Orange",
-          price: 100,
-          imgUrl: "https://picsum.photos/id/12/200/200",
-        },
-        {
-          id: 3,
-          name: "Mango",
-          price: 80,
-          imgUrl: "https://picsum.photos/id/13/200/200",
-        },
-      ];
+      let products = [
+      { id: 1, name: "Apple", price: 250, imgUrl: "../images/pexels-pixabay-206959.jpg"},
+      { id: 2, name: "Banana", price: 100, imgUrl: "../images/pexels-shvets-production-7194915.jpg"},
+      { id: 3, name: "Mango", price: 80, imgUrl: "../images/pexels-julieaagaard-2294471.jpg"},
+    ];
       
 
       function addProduct() {
-        let id = document.querySelector("#txtId").value;
-        let name = document.querySelector("#txtName").value;
-        let price = document.querySelector("#txtPrice").value;
-        let imgUrl = document.querySelector("#txtUrl").value;
-        const obj = {
-          id: id,
-          name: name,
-          price: price,
-          imgUrl: imgUrl,
-        };
-        products.push(obj)
-        dispProducts()
-      }
-
-      function dispProducts() {
-        let str = "";
-        products.map((value) => {
-          str += `<div>
-                <img src=${value.imgUrl}/>
-                <h2>${value.name}</h2>
-                <h3>${value.price}</h3>
-                <button>Add to Cart</button>
-                </div>`;
-      
+        let id = document.querySelector("#textid").value;
+        let name = document.querySelector("#textname").value;
+        let price = document.querySelector("#textprice").value;
+        let imgUrl = document.querySelector("#texturl").value;
         
-      });
-      container.innerHTML = str;
+        const obj = {
+        id: parseInt(id),
+        name,
+        price: parseFloat(price),
+        imgUrl,
+      };
+
+      products.push(obj);
+      dispproducts();
     }
+
+    function deleteProduct(id) {
+      products = products.filter(product => product.id !== id);
+      dispproducts();
+    }
+
+    function dispproducts() {
+      let str = "";
+       products.forEach((value) => {
+        str += `<div>
+               <img src="${value.imgUrl}" alt="${value.name}" />
+                  <h2>${value.name}</h2>
+                  <h3>&#8377;${value.price}</h3>
+                  <button>Add to Cart</button>
+                  <button onclick="deleteProduct(${value.id})">Delete</button>
+                </div>`;
+              });
+         document.getElementById("container").innerHTML = str;
+    }        
+      
     </script>
   </body>
 </html>
