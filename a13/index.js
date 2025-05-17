@@ -4,10 +4,10 @@ const products=[
     {id :3, name:"Product 3",price:44},
 ];
 
-let newPrice=products.map((value) => value.price+5);
- console.log(newPrice);
+const newPrice=products.map((value) => ({ ...value,price:value.price+5}));
+ 
 
-products.forEach((product)=> console.log(product.name));
+products.forEach((product)=> console.log(`name:${product.name}, Price:${product.price}`));
 
  
 
