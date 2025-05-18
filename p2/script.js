@@ -7,7 +7,7 @@ const products = [
 const showProducts = () => {
   const root = document.getElementById("root");
 
-  root.innerHTML = "<h2>Product List</h2>"; // Set initial heading
+  
 
   products.map((value) => {
     root.innerHTML += `
@@ -23,3 +23,4 @@ const showProducts = () => {
 const addToCart = (id) => {
   alert("Product " + id + " added to cart!");
 };
+
