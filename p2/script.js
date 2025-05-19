@@ -7,12 +7,14 @@ const products = [
 const cart = {};
 
 const addToCart = (id) => {
-  //insert id and quantity as 1 ie {1:1} if add button
-  // on box 1 is clicked, then if add button on box 3 is clicked then
-  //cart object should be {1:1,3:1}
-  // write code here....
-  cart[id] = 1;
-  // console.log(cart);
+  
+  //cart[id] = 1;
+  if (cart[id]) {
+    cart[id] += 1; 
+  } else {
+    cart[id] = 1;  
+  }
+
 };
 
 const increment = (id) => {
