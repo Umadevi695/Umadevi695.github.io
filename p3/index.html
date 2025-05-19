@@ -8,6 +8,17 @@
 <body>
     <h1>Bank ATM</h1>
     <hr/>
+
+    <div id="loginScreen">
+    <input type="text" id="card" placeholder="Enter Card Number" /><br/><br/>
+    <input type="password" id="pin" placeholder="Enter PIN" /><br/><br/>
+    <button onclick="login()">Submit</button>
+    <p id="error" style="color:red;"></p>
+  </div>
+
+  <div id="welcomeScreen" style="display: none;">
+    <h2 id="welcomeMsg"></h2>
+  </div>
     <script src="index.js"></script>
 </body>
 </html>
