@@ -162,7 +162,9 @@ body {
 .category{
     display:flex;
     justify-content:space-between;
+  
 }
+
 .cat-box{
     width:190px;
     height:100px;
@@ -292,7 +294,10 @@ body {
   width:20px;
   height:20px;
 }
-
+.no-bullets{
+  list-style-type: none;
+  padding-left:0;
+}
 
 
 
