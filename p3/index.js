@@ -29,22 +29,28 @@ const login = () => {
 const performTransaction = () => {
   const type = document.getElementById("transactionType").value;
   const amount = parseFloat(document.getElementById("amount").value);
+  const messageEl=document.getElementById("message");
+  messageEl.innerText = "";
 
   if (isNaN(amount) || amount <= 0) {
-    alert("Please enter a valid amount.");
+    messageEl.style.color = "red";
+    messageEl.innerText = "Please enter a valid amount.";
     return;
   }
 
   if (type === "deposit") {
     currentCustomer.balance += amount;
-    alert("Deposit successful!");
+     messageEl.style.color = "green";
+    messageEl.innerText = `₹${amount.toFixed(2)} deposited successfully.`;
   } else if (type === "withdraw") {
     if (amount > currentCustomer.balance) {
-      alert("Insufficient balance.");
+      messageEl.style.color = "red";
+      messageEl.innerText = "Insufficient balance.";
       return;
     }
     currentCustomer.balance -= amount;
-    alert("Withdrawal successful!");
+     messageEl.style.color = "green";
+    messageEl.innerText = `₹${amount.toFixed(2)} withdrawn successfully.`;
   }
 
   updateBalance();
