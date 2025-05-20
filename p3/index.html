@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bank ATM</title>
+  <style>
+    #exitBtn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 5px 10px;
+      background-color: red;
+      color: white;
+      border: none;
+      cursor: pointer;
+      display: none;
+    }
+  </style>
 </head>
 <body>
-    <h1>Bank ATM</h1>
-    <hr/>
+  <h1>Bank ATM</h1>
+  <hr/>
 
-    <div id="loginScreen">
+  <div id="loginScreen">
     <input type="text" id="card" placeholder="Enter Card Number" /><br/><br/>
     <input type="password" id="pin" placeholder="Enter PIN" /><br/><br/>
     <button onclick="login()">Submit</button>
@@ -18,7 +31,20 @@
 
   <div id="welcomeScreen" style="display: none;">
     <h2 id="welcomeMsg"></h2>
+    
+    <select id="transactionType">
+      <option value="deposit">Deposit</option>
+      <option value="withdraw">Withdraw</option>
+    </select><br/><br/>
+
+    <input type="number" id="amount" placeholder="Enter amount" /><br/><br/>
+    <button onclick="performTransaction()">Submit</button><br/><br/>
+
+    <h3 id="balanceDisplay"></h3>
   </div>
-    <script src="index.js"></script>
+
+  <button id="exitBtn" onclick="exit()">Exit</button>
+
+  <script src="index.js"></script>
 </body>
 </html>
