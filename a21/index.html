@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Umadevi Portfolio</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+    crossorigin="anonymous"
+  />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      padding-top: 70px;
+    }
+
+    .navbar-custom {
+      background-color: orange;
+    }
+
+    .scroll-section {
+      scroll-margin-top: 80px;
+    }
+
+    .full-screen-sec {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 60px 20px;
+    }
+
+    #home {
+      background-color: #ffe066;
+    }
+
+    #about {
+      background-color: #d0f0c0;
+    }
+
+    #projects {
+      background-color: #e6f7ff;
+    }
+
+    #skills {
+      background-color: #fef3c7;
+    }
+
+    #contact {
+      background-color: #c6f6d5;
+    }
+
+    .custom-card {
+      background-color: #f8f9fa;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  
+  <header class="fixed-top bg-light py-2 shadow-sm">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <h3 class="text-primary ms-3">Umadevi</h3>
+      <ul class="nav justify-content-end me-3">
+        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+
+  
+  <section id="home" class="scroll-section full-screen-sec">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <h1 class="text-primary">MERN Stack Developer</h1>
+          <p class="text-primary">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi earum, fuga ipsum qui maiores rem.
+          </p>
+          <button class="btn btn-lg btn-outline-danger">View More</button>
+        </div>
+        <div class="col-lg-6 text-center">
+          <img src="../images/image.png" class="img-fluid rounded-circle w-50 mx-auto d-block" alt="Profile">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="about" class="scroll-section full-screen-sec">
+    <div class="container text-center">
+      <h1 class="text-success mb-5 fw-bold">About Me</h1>
+      <p class="text-dark">
+        Hello! I'm Thodeti Umadevi, a dedicated MERN Stack developer passionate about building responsive web applications.
+      </p>
+      <p class="text-dark">
+        I enjoy contributing to open-source, learning new tech, and collaborating to bring ideas to life.
+      </p>
+      <button class="btn btn-lg btn-primary mt-3">Download CV</button>
+    </div>
+  </section>
+
+  
+  <section id="projects" class="scroll-section full-screen-sec text-center">
+    <div class="container">
+      <h2 class="mb-5 fw-bold">Projects</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-4">
+          <div class="custom-card">
+            <h5 class="fw-bold">Food-Mart</h5>
+            <p>This is the homepage of an online foodstore</p>
+            <a href="#" class="text-primary">View Project</a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="custom-card">
+            <h5 class="fw-bold">My Store</h5>
+            <p>A project using HTML, CSS, and JavaScript</p>
+            <a href="#" class="text-primary">View Project</a>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="custom-card">
+            <h5 class="fw-bold">Bank ATM</h5>
+            <p>A project using HTML, CSS, and JavaScript</p>
+            <a href="#" class="text-primary">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="skills" class="scroll-section full-screen-sec">
+    <div class="container">
+      <div class="card shadow-lg border-0">
+        <div class="card-header bg-primary text-white text-center">
+          <h3 class="mb-0">My Skills</h3>
+        </div>
+        <div class="list-group list-group-flush">
+          <div class="list-group-item d-flex justify-content-between align-items-center">
+            HTML <span class="badge bg-success">Expert</span>
+          </div>
+          <div class="list-group-item d-flex justify-content-between align-items-center">
+            CSS <span class="badge bg-info text-dark">Advanced</span>
+          </div>
+          <div class="list-group-item d-flex justify-content-between align-items-center">
+            JavaScript <span class="badge bg-warning text-dark">Intermediate</span>
+          </div>
+          <div class="list-group-item d-flex justify-content-between align-items-center">
+            Bootstrap <span class="badge bg-secondary">Advanced</span>
+          </div>
+          <div class="list-group-item d-flex justify-content-between align-items-center">
+            Java <span class="badge bg-danger">Intermediate</span>
+          </div>
+          <div class="list-group-item d-flex justify-content-between align-items-center">
+            SQL <span class="badge bg-dark">Basic</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="contact" class="scroll-section full-screen-sec">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 bg-success p-5 rounded-4 shadow-lg">
+          <h2 class="mb-4 fw-bold text-center text-white">Contact Me</h2>
+          <input type="text" class="form-control mb-3" placeholder="Your name" />
+          <input type="email" class="form-control mb-3" placeholder="Your email" />
+          <textarea class="form-control mb-3" placeholder="Your message" rows="4"></textarea>
+          <button class="btn btn-info w-100">Submit</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+  <footer class="bg-body-tertiary text-center text-lg-start">
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.05);">
+      © 2020 Copyright:
+      <a class="text-body" href="#">Umadevi. All rights reserved</a>
+    </div>
+  </footer>
+
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
+    crossorigin="anonymous"
+  ></script>
+</body>
+</html>
