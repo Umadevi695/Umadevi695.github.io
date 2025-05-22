@@ -1,50 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bank ATM</title>
-  <style>
-    #exitBtn {
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      padding: 5px 10px;
-      background-color: red;
-      color: white;
-      border: none;
-      cursor: pointer;
-      display: none;
-    }
-  </style>
-</head>
-<body>
-  <h1>Bank ATM</h1>
-  <hr/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank ATM</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="atm-container">
+      <h1>Bank ATM</h1>
+      <div id="loginScreen" class="screen">
+        <input type="text" id="card" placeholder="Enter Card Number" />
+        <input type="password" id="pin" placeholder="Enter PIN" />
+        <button onclick="login()">Submit</button>
+        <p id="error" class="error"></p>
+      </div>
 
-  <div id="loginScreen">
-    <input type="text" id="card" placeholder="Enter Card Number" /><br/><br/>
-    <input type="password" id="pin" placeholder="Enter PIN" /><br/><br/>
-    <button onclick="login()">Submit</button>
-    <p id="error" style="color:red;"></p>
-  </div>
+      <div id="welcomeScreen" class="screen" style="display: none">
+        <h2 id="welcomeMsg"></h2>
+        <select id="transactionType" onchange="toggleTransferInput()">
+          <option value="deposit">Deposit</option>
+          <option value="withdraw">Withdraw</option>
+          <option value="transfer">Fund Transfer</option>
+        </select>
+        <input
+          type="text"
+          id="recipientCard"
+          placeholder="Recipient Card Number"
+          style="display: none"
+        />
 
-  <div id="welcomeScreen" style="display: none;">
-    <h2 id="welcomeMsg"></h2>
-    
-    <select id="transactionType">
-      <option value="deposit">Deposit</option>
-      <option value="withdraw">Withdraw</option>
-    </select><br/><br/>
+        <input type="number" id="amount" placeholder="Enter amount" />
+        <button onclick="performTransaction()">Submit</button>
+        <p id="message"></p>
+        <h3 id="balanceDisplay"></h3>
+      </div>
 
-    <input type="number" id="amount" placeholder="Enter amount" /><br/><br/>
-    <button onclick="performTransaction()">Submit</button><br/><br/>
-    <p id="message" style="color:green;"></p>
-    <h3 id="balanceDisplay"></h3>
-  </div>
+      <button id="exitBtn" onclick="exit()">Exit</button>
+    </div>
 
-  <button id="exitBtn" onclick="exit()">Exit</button>
-
-  <script src="index.js"></script>
-</body>
+    <script src="index.js"></script>
+  </body>
 </html>
