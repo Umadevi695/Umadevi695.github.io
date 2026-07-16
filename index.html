@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thodeti Umadevi | Portfolio</title>
+    
+    <!-- Favicon containing student's initials -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22 fill=%22%234F46E5%22 font-family=%22system-ui%22 font-weight=%22bold%22>TU</text></svg>">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Space Grotesk (headings) and Inter (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#EEF2FF',
+                            100: '#E0E7FF',
+                            500: '#6366F1',
+                            600: '#4F46E5',
+                            700: '#4338CA',
+                            900: '#312E81',
+                        },
+                        neutral: {
+                            950: '#0F0F11',
+                            900: '#16161A',
+                            800: '#222227',
+                            100: '#F4F4F6',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0F0F11;
+            color: #F4F4F6;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4, .font-display {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #16161A;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #4F46E5;
+            border-radius: 3px;
+        }
+        /* Reveal animation utilities */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Grid accent styling */
+        .editorial-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        }
+    </style>
+</head>
+<body class="editorial-grid min-h-screen selection:bg-indigo-500 selection:text-white">
+
+    <header class="border-b border-neutral-800/80 sticky top-0 bg-neutral-950/80 backdrop-blur-md z-50">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="#" class="font-display font-bold text-xl tracking-tight flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-brand-500"></span>
+                UMADEVI.T
+            </a>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-neutral-400">
+                <a href="#about" class="hover:text-brand-500 transition-colors">About</a>
+                <a href="#skills" class="hover:text-brand-500 transition-colors">Skills</a>
+                <a href="#projects" class="hover:text-brand-500 transition-colors">Projects</a>
+                <a href="#experience" class="hover:text-brand-500 transition-colors">Experience</a>
+                <a href="#education" class="hover:text-brand-500 transition-colors">Education & Awards</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <a href="#contact" class="hidden sm:inline-flex items-center justify-center bg-brand-600 hover:bg-brand-700 text-white font-medium text-sm px-5 h-10 rounded-full transition-all">
+                    Get in Touch
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-12 lg:py-20">
+        
+        <section id="about" class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-24 lg:mb-36">
+            
+            <!-- Hero Header spanning 12 columns -->
+            <div class="lg:col-span-12">
+                <span class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full border border-brand-500/20 bg-brand-500/5 text-brand-500 text-xs font-semibold uppercase tracking-wider mb-6">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-500 animate-pulse"></span>
+                    Open to SDE Opportunities
+                </span>
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-none text-white max-w-5xl">
+                    THODETI <br class="hidden md:block"/>UMADEVI
+                </h1>
+                <p class="mt-6 text-xl md:text-2xl text-neutral-400 font-display font-light max-w-3xl">
+                    Computer Science & Engineering Student • Java, Full Stack (MERN), & Algorithms Developer
+                </p>
+            </div>
+
+            <!-- Asymmetric Editorial Content Grid (Left & Right Column Splits) -->
+            <div class="lg:col-span-7 border-t border-neutral-800 pt-8">
+                <h3 class="text-xs font-bold tracking-widest text-brand-500 uppercase mb-4">Core Statement</h3>
+                <!-- Pull Quote Design -->
+                <blockquote class="text-2xl md:text-3xl font-display font-medium text-white leading-relaxed italic relative">
+                    "Passionate Software Developer with a solid foundation in Java, Data Structures & Algorithms, DBMS, and Full Stack Development. Eager to build reliable software solutions and grow as a professional engineer."
+                </blockquote>
+            </div>
+
+            <div class="lg:col-span-5 border-t border-neutral-800 pt-8 flex flex-col justify-between h-full gap-8">
+                <div>
+                    <h3 class="text-xs font-bold tracking-widest text-brand-500 uppercase mb-4">Quick Stats</h3>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="border-l border-neutral-800 pl-4">
+                            <span class="block text-3xl font-display font-bold text-white">8.91</span>
+                            <span class="text-xs text-neutral-400 uppercase tracking-wider">Current CGPA</span>
+                        </div>
+                        <div class="border-l border-neutral-800 pl-4">
+                            <span class="block text-3xl font-display font-bold text-white">1st</span>
+                            <span class="text-xs text-neutral-400 uppercase tracking-wider">Year-2 Rank</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="https://github.com/Umadevi695" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-sm text-neutral-400 hover:text-white transition-colors bg-neutral-900 px-4 py-2.5 rounded-lg border border-neutral-800/80">
+                        <i data-lucide="github" class="w-4.5 h-4.5"></i> GitHub Profile
+                    </a>
+                    <a href="https://linkedin.com/in/uma-devi-56090235b" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 text-sm text-neutral-400 hover:text-white transition-colors bg-neutral-900 px-4 py-2.5 rounded-lg border border-neutral-800/80">
+                        <i data-lucide="linkedin" class="w-4.5 h-4.5"></i> LinkedIn
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="reveal border-t border-neutral-800 pt-16 mb-24 lg:mb-36">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+                <div class="lg:col-span-4">
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white mb-4">Technical expertise.</h2>
+                    <p class="text-neutral-400 max-w-sm">
+                        A structured map of programming languages, frameworks, and core professional competencies built through formal academic and practical engineering experience.
+                    </p>
+                </div>
+                
+                <div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-8">
+                    <!-- Languages -->
+                    <div class="bg-neutral-900/60 border border-neutral-800/80 p-6 rounded-2xl">
+                        <h3 class="font-display font-bold text-lg text-white mb-4 flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span>
+                            Languages & Databases
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 bg-neutral-950 text-neutral-300 rounded-lg text-sm font-medium border border-neutral-800/50">Java</span>
+                            <span class="px-3 py-1.5 bg-neutral-950 text-neutral-300 rounded-lg text-sm font-medium border border-neutral-800/50">JavaScript</span>
+                            <span class="px-3 py-1.5 bg-neutral-950 text-neutral-300 rounded-lg text-sm font-medium border border-neutral-800/50">C Language</span>
+                            <span class="px-3 py-1.5 bg-neutral-950 text-neutral-300 rounded-lg text-sm font-medium border border-neutral-800/50">MySQL</span>
+                            <span class="px-3 py-1.5 bg-neutral-950 text-neutral-300 rounded-lg text-sm font-medium border border-neutral-800/50">MongoDB</span>
+                        </div>
+                    </div>
+
+                    <!-- Web Tech -->
+                    <div class="bg-neutral-900/60 border border-neutral-800/80 p-6 rounded-2xl">
+                        <h3 class="font-display font-bold text-lg text-white mb-4 flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span>
+                            Web Technologies
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 bg-neutral-950 text-neutral-300 rounded-lg text-sm font-medium border border-neutral-800/50">MERN Stack</span>
+                            <span class="px-3 py-1.5 bg-neutral-950 text-neutral-300 rounded-lg text-sm font-medium border border-neutral-800/50">React.js</span>
+                            <span class="px-3 py-1.5 bg-neutral-950 text-neutral-300 rounded-lg text-sm font-medium border border-neutral-800/50">Node.js</span>
+                            <span class="px-3 py-1.5 bg-neutral-950 text-neutral-300 rounded-lg text-sm font-medium border border-neutral-800/50">Express.js</span>
+                            <span class="px-3 py-1.5 bg-neutral-950 text-neutral-300 rounded-lg text-sm font-medium border border-neutral-800/50">HTML5 / CSS3</span>
+                        </div>
+                    </div>
+
+                    <!-- Core Soft/CS Skills -->
+                    <div class="bg-neutral-900/60 border border-neutral-800/80 p-6 rounded-2xl sm:col-span-2">
+                        <h3 class="font-display font-bold text-lg text-white mb-4 flex items-center gap-2">
+                            <span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span>
+                            Core Strengths & Concepts
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1.5 bg-neutral-950 text-neutral-300 rounded-lg text-sm font-medium border border-neutral-800/50">Data Structures & Algorithms</span>
+                            <span class="px-3 py-1.5 bg-neutral-950 text-neutral-300 rounded-lg text-sm font-medium border border-neutral-800/50">Graph Theory & Allocation</span>
+                            <span class="px-3 py-1.5 bg-neutral-950 text-neutral-300 rounded-lg text-sm font-medium border border-neutral-800/50">RESTful APIs</span>
+                            <span class="px-3 py-1.5 bg-neutral-950 text-neutral-300 rounded-lg text-sm font-medium border border-neutral-800/50">Database Management Systems</span>
+                            <span class="px-3 py-1.5 bg-neutral-950 text-neutral-300 rounded-lg text-sm font-medium border border-neutral-800/50">Problem Solving</span>
+                            <span class="px-3 py-1.5 bg-neutral-950 text-neutral-300 rounded-lg text-sm font-medium border border-neutral-800/50">Time Management</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="reveal border-t border-neutral-800 pt-16 mb-24 lg:mb-36">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white mb-2">Featured Projects</h2>
+                    <p class="text-neutral-400">Highlighting practical development work across algorithms and full-stack engineering.</p>
+                </div>
+            </div>
+
+            <!-- Asymmetric Editorial Grid for Projects -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+                
+                <!-- Project 1: Virtual Study Group Platform (Span 7) -->
+                <div class="lg:col-span-7 bg-neutral-900/40 border border-neutral-800 rounded-3xl p-8 hover:border-brand-500/50 transition-all group flex flex-col justify-between min-h-[420px]">
+                    <div>
+                        <div class="flex justify-between items-start mb-6">
+                            <span class="text-xs font-semibold text-brand-500 tracking-wider uppercase px-2.5 py-1 rounded bg-brand-500/10">Full Stack Project</span>
+                            <i data-lucide="layers" class="text-neutral-500 group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3 class="text-2xl md:text-3xl font-bold text-white mb-3">Virtual Study Group Platform</h3>
+                        <p class="text-neutral-400 mb-6 leading-relaxed max-w-xl">
+                            Developed a collaborative web environment enabling users to discover, join, and set up dynamic study circles. Includes robust authentication, RESTful routing, and features like instant chat functionality with secure file sharing.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs font-semibold bg-neutral-950 text-neutral-400 px-2.5 py-1 rounded">React</span>
+                            <span class="text-xs font-semibold bg-neutral-950 text-neutral-400 px-2.5 py-1 rounded">Node.js</span>
+                            <span class="text-xs font-semibold bg-neutral-950 text-neutral-400 px-2.5 py-1 rounded">MongoDB</span>
+                            <span class="text-xs font-semibold bg-neutral-950 text-neutral-400 px-2.5 py-1 rounded">JWT</span>
+                        </div>
+                        <div class="pt-4 border-t border-neutral-800/80 flex gap-4">
+                            <a href="https://github.com/Umadevi695" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-white flex items-center gap-1.5 hover:text-brand-500 transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: Medical Equipment Allocation (Span 5) -->
+                <div class="lg:col-span-5 bg-neutral-900/40 border border-neutral-800 rounded-3xl p-8 hover:border-brand-500/50 transition-all group flex flex-col justify-between min-h-[420px]">
+                    <div>
+                        <div class="flex justify-between items-start mb-6">
+                            <span class="text-xs font-semibold text-indigo-400 tracking-wider uppercase px-2.5 py-1 rounded bg-indigo-500/10">Algorithm Implementation</span>
+                            <i data-lucide="network" class="text-neutral-500 group-hover:text-white transition-colors"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-3">Medical Equipment Allocation</h3>
+                        <p class="text-neutral-400 mb-6 leading-relaxed">
+                            A Java GUI application visualizing complex health system connections. Employs Prim's Algorithm to optimally route and allocate critical medical items across graph-modeled nodes under minimal cost criteria.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="text-xs font-semibold bg-neutral-950 text-neutral-400 px-2.5 py-1 rounded">Java GUI</span>
+                            <span class="text-xs font-semibold bg-neutral-950 text-neutral-400 px-2.5 py-1 rounded">Graph Theory</span>
+                            <span class="text-xs font-semibold bg-neutral-950 text-neutral-400 px-2.5 py-1 rounded">Prim's Algorithm</span>
+                        </div>
+                        <div class="pt-4 border-t border-neutral-800/80 flex gap-4">
+                            <a href="https://github.com/Umadevi695" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-white flex items-center gap-1.5 hover:text-brand-500 transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i> Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: MERN E-Commerce (Span 12) -->
+                <div class="lg:col-span-12 bg-neutral-900/40 border border-neutral-800 rounded-3xl p-8 hover:border-brand-500/50 transition-all group grid grid-cols-1 md:grid-cols-12 gap-8">
+                    <div class="md:col-span-8 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start mb-6 md:hidden">
+                                <span class="text-xs font-semibold text-brand-500 tracking-wider uppercase px-2.5 py-1 rounded bg-brand-500/10">MERN Stack</span>
+                            </div>
+                            <span class="hidden md:inline-flex text-xs font-semibold text-brand-500 tracking-wider uppercase px-2.5 py-1 rounded bg-brand-500/10 mb-4 self-start">E-Commerce Application</span>
+                            <h3 class="text-2xl md:text-3xl font-bold text-white mb-3">MERN E-Commerce Platform</h3>
+                            <p class="text-neutral-400 leading-relaxed max-w-2xl">
+                                Built and structured a complete web store including Home page displays, secure signup/login workflows, structured state-driven shopping carts, and dynamic checkout/orders database management pipelines.
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-6 border-t border-neutral-800/80 flex gap-4">
+                            <a href="https://github.com/Umadevi695" target="_blank" rel="noopener noreferrer" class="text-sm font-semibold text-white flex items-center gap-1.5 hover:text-brand-500 transition-colors">
+                                <i data-lucide="github" class="w-4 h-4"></i> Code Repository
+                            </a>
+                        </div>
+                    </div>
+                    <div class="md:col-span-4 flex flex-col justify-between border-l border-neutral-800/80 pl-0 md:pl-8 pt-6 md:pt-0">
+                        <div>
+                            <h4 class="text-xs font-bold text-neutral-400 uppercase tracking-widest mb-3">Key Integrations</h4>
+                            <ul class="text-sm text-neutral-400 space-y-2">
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span> MongoDB Database Architecture</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span> REST API Backend (Express/Node)</li>
+                                <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-brand-500"></span> Responsive Interface Components</li>
+                            </ul>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mt-6">
+                            <span class="text-xs font-semibold bg-neutral-950 text-neutral-400 px-2.5 py-1 rounded">React.js</span>
+                            <span class="text-xs font-semibold bg-neutral-950 text-neutral-400 px-2.5 py-1 rounded">Node.js</span>
+                            <span class="text-xs font-semibold bg-neutral-950 text-neutral-400 px-2.5 py-1 rounded">Express</span>
+                            <span class="text-xs font-semibold bg-neutral-950 text-neutral-400 px-2.5 py-1 rounded">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="experience" class="reveal border-t border-neutral-800 pt-16 mb-24 lg:mb-36">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+                <div class="lg:col-span-4">
+                    <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-white mb-4">Professional Experience.</h2>
+                    <p class="text-neutral-400">
+                        Practical industry experience in development setups, delivering modern codebases and working with remote/onsite developer architectures.
+                    </p>
+                </div>
+                
+                <div class="lg:col-span-8 space-y-8">
+                    <!-- Internship block -->
+                    <div class="bg-neutral-900/60 border border-neutral-800/80 p-8 rounded-2xl relative overflow-hidden group">
+                        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
+                            <div>
+                                <span class="text-brand-500 text-sm font-semibold tracking-wider uppercase">Cantilever Labs</span>
+                                <h3 class="text-xl font-bold text-white mt-1">MERN Stack Intern</h3>
+                            </div>
+                            <span class="text-xs text-neutral-400 bg-neutral-950 border border-neutral-800 px-3 py-1.5 rounded-full font-medium">
+                                May 2025 — June 2025
+                            </span>
+                        </div>
+                        <div class="text-neutral-400 space-y-3 text-sm leading-relaxed">
+                            <p class="flex gap-2 items-start">
+                                <span class="text-brand-500 font-bold mt-0.5">•</span>
+                                Developed and deployed multiple web modules using MongoDB, Express, React, and Node.js.
+                            </p>
+                            <p class="flex gap-2 items-start">
+                                <span class="text-brand-500 font-bold mt-0.5">•</span>
+                                Gained intensive hands-on experience in API testing (Postman), structural route controls, and RESTful guidelines.
+                            </p>
+                            <p class="flex gap-2 items-start">
+                                <span class="text-brand-500 font-bold mt-0.5">•</span>
+                                Completed 108 hours of structured virtual training combined with a week-long intensive offline developer lab.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="reveal border-t border-neutral-800 pt-16 mb-24 lg:mb-36">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Education Track (Left 6 Cols) -->
+                <div class="lg:col-span-6 space-y-6">
+                    <h2 class="text-3xl font-bold tracking-tight text-white mb-6">Education</h2>
+                    <div class="border-l-2 border-brand-500/30 pl-6 py-2 space-y-6">
+                        <div class="relative">
+                            <span class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-brand-500 border-4 border-neutral-950"></span>
+                            <span class="text-brand-500 text-xs font-bold uppercase tracking-wider">Aug 2023 — Present</span>
+                            <h3 class="text-lg font-bold text-white mt-1">B.Tech in Computer Science & Engineering</h3>
+                            <p class="text-neutral-400 text-sm">Geethanjali College of Engineering and Technology</p>
+                            <p class="text-brand-500 text-sm font-semibold mt-2">CGPA: 8.91 / 10</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certifications & Awards (Right 6 Cols) -->
+                <div class="lg:col-span-6 space-y-6">
+                    <h2 class="text-3xl font-bold tracking-tight text-white mb-6">Credentials & Awards</h2>
+                    <div class="space-y-4">
+                        
+                        <!-- Achivement -->
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-neutral-900/40 border border-neutral-800">
+                            <div class="p-2 rounded-lg bg-yellow-500/10 text-yellow-500">
+                                <i data-lucide="award" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-white text-sm">First Rank Holder</h3>
+                                <p class="text-neutral-400 text-xs mt-1">Secured 1st Rank in Second Year (B.Tech-CSE)</p>
+                            </div>
+                        </div>
+
+                        <!-- Certification 1 -->
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-neutral-900/40 border border-neutral-800">
+                            <div class="p-2 rounded-lg bg-indigo-500/10 text-brand-500">
+                                <i data-lucide="file-check" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-white text-sm">Java Fundamentals</h3>
+                                <p class="text-neutral-400 text-xs mt-1">Oracle Academy</p>
+                            </div>
+                        </div>
+
+                        <!-- Certification 2 -->
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-neutral-900/40 border border-neutral-800">
+                            <div class="p-2 rounded-lg bg-indigo-500/10 text-brand-500">
+                                <i data-lucide="file-check" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-white text-sm">Graph Theory Programming Camp</h3>
+                                <p class="text-neutral-400 text-xs mt-1">AlgoUniversity</p>
+                            </div>
+                        </div>
+
+                        <!-- Certification 3 -->
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-neutral-900/40 border border-neutral-800">
+                            <div class="p-2 rounded-lg bg-indigo-500/10 text-brand-500">
+                                <i data-lucide="file-check" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-white text-sm">Joy of Computing using Python</h3>
+                                <p class="text-neutral-400 text-xs mt-1">NPTEL</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact" class="reveal border-t border-neutral-800 pt-16">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7">
+                    <span class="text-xs font-bold text-brand-500 uppercase tracking-widest block mb-4">Let's work together</span>
+                    <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-white mb-6">Let's build reliable software systems together.</h2>
+                    <p class="text-neutral-400 max-w-xl leading-relaxed mb-8">
+                        Whether you are looking to hire a software engineer intern, collaborate on projects, or discuss core algorithms/MERN stack developments, feel free to drop a line.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-6">
+                        <a href="mailto:uma970179@gmail.com" class="inline-flex items-center justify-center gap-2 bg-brand-600 hover:bg-brand-700 text-white font-medium px-6 py-3.5 rounded-xl transition-all">
+                            <i data-lucide="mail" class="w-4.5 h-4.5"></i> uma970179@gmail.com
+                        </a>
+                        <a href="tel:+919000351788" class="inline-flex items-center justify-center gap-2 bg-neutral-900 hover:bg-neutral-800 text-neutral-300 border border-neutral-800 font-medium px-6 py-3.5 rounded-xl transition-all">
+                            <i data-lucide="phone" class="w-4.5 h-4.5"></i> +91 9000351788
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 bg-neutral-900/60 border border-neutral-800 p-8 rounded-3xl">
+                    <h3 class="font-display font-bold text-xl text-white mb-6">Coding & Professional Profiles</h3>
+                    <div class="space-y-4">
+                        <a href="https://github.com/Umadevi695" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-4 rounded-xl bg-neutral-950/80 border border-neutral-800/80 hover:border-brand-500 transition-all group">
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="github" class="w-5 h-5 text-neutral-400 group-hover:text-white transition-colors"></i>
+                                <span class="font-medium text-white text-sm">GitHub</span>
+                            </div>
+                            <span class="text-xs text-neutral-500 group-hover:text-neutral-300 transition-colors flex items-center gap-1">
+                                Umadevi695 <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                            </span>
+                        </a>
+
+                        <a href="https://linkedin.com/in/uma-devi-56090235b" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-4 rounded-xl bg-neutral-950/80 border border-neutral-800/80 hover:border-brand-500 transition-all group">
+                            <div class="flex items-center gap-3">
+                                <i data-lucide="linkedin" class="w-5 h-5 text-neutral-400 group-hover:text-white transition-colors"></i>
+                                <span class="font-medium text-white text-sm">LinkedIn</span>
+                            </div>
+                            <span class="text-xs text-neutral-500 group-hover:text-neutral-300 transition-colors flex items-center gap-1">
+                                uma-devi-56090235b <i data-lucide="arrow-up-right" class="w-3 h-3"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="border-t border-neutral-900 bg-neutral-950/40 py-8 mt-24">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+            <span class="text-xs text-neutral-500 font-display">© 2026 THODETI UMADEVI. ALL RIGHTS RESERVED.</span>
+            <div class="flex items-center gap-6">
+                <a href="#about" class="text-xs text-neutral-500 hover:text-white transition-colors">Back to Top</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Init lucide icons
+        lucide.createIcons();
+
+        // Scroll reveal logic
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        function checkReveal() {
+            const triggerBottom = window.innerHeight * 0.85;
+            
+            revealElements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < triggerBottom) {
+                    el.classList.add('active');
+                }
+            });
+        }
+
+        // Run scroll reveal checks
+        window.addEventListener('scroll', checkReveal);
+        window.addEventListener('load', checkReveal);
+        checkReveal(); // initial invoke
+    </script>
+</body>
+</html>
